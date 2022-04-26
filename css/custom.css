@@ -137,3 +137,8 @@ h6 {
   border-radius: 25px;
   padding: 10px;
 }
+input[type="submit"]:hover,
+ul > li:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
