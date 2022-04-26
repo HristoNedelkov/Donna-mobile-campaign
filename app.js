@@ -49,27 +49,7 @@ function highlightLink(el) {
     case "Contact":
       el.classList.add("active");
       show("contact");
-      const divGenerate = (obj) => {
-        return `
-        <div class="field comment-card" >
-        <label for="comment">| Автор: ${obj.name} |</label>
-        <p>${obj.text}</p>
-        </div>`;
-      };
-      commentServices
-        .getAll()
-        .then((res) => {
-          if (Object.keys(res).length != 0) return res;
-          else return {};
-        })
-        .then((data) => {
-          let commentsDiv = document.getElementById("comments-section");
 
-          for (const el of Object.entries(data)) {
-            console.log(divGenerate(el[1]));
-            commentsDiv.innerHTML += divGenerate(el[1]);
-          }
-        });
       show("contact");
       break;
     case "About us":
@@ -80,12 +60,35 @@ function highlightLink(el) {
       break;
   }
 }
+const divGenerate = (obj) => {
+  return `
+      <div class="field comment-card" >
+      <label for="comment">| Автор: ${obj.name  } |</label>
+      <p>${obj.text}</p>
+      </div>`;
+};
 function onPostComment() {
-  const name = document.getElementById("comments-name").value;
-  const text = document.getElementById("comments-text").value;
+  const name = document.getElementById("comments-name");
+  const text = document.getElementById("comments-text");
   if (name != "" && text != "") {
-    commentServices.add({ name, text });
+    commentServices.add({ name: name.value, text: text.value });
     alert("Успешно публикуван коментар!");
+    name.value = "";
+    text.value = "";
+    commentServices
+      .getAll()
+      .then((res) => {
+        if (Object.keys(res).length != 0) return res;
+        else return {};
+      })
+      .then((data) => {
+        let commentsDiv = document.getElementById("comments-section");
+
+        for (const el of Object.entries(data)) {
+          console.log(divGenerate(el[1]));
+          commentsDiv.innerHTML += divGenerate(el[1]);
+        }
+      });
   } else alert("Попълнете всички полета!");
 }
 
