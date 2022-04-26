@@ -1,6 +1,7 @@
 const paths = {
   home: document.getElementById("home-template"),
   catalog: document.getElementById("catalog-template"),
+  contact: document.getElementById("contact-template"),
   // gallery: document.getElementById("gallery-template"),
   info: document.getElementById("info-template"),
 };
@@ -49,6 +50,28 @@ function highlightLink(el) {
     case "Contact":
       el.classList.add("active");
       show("contact");
+      const divGenerate = (obj) => {
+        return `
+        <div class="field comment-card" >
+        <label for="comment">| Автор: ${obj.name} |</label>
+        <p>${obj.text}</p>
+        </div>`;
+      };
+      commentServices
+        .getAll()
+        .then((res) => {
+          if (Object.keys(res).length != 0) return res;
+          else return {};
+        })
+        .then((data) => {
+          let commentsDiv = document.getElementById("comments-section");
+
+          for (const el of Object.entries(data)) {
+            console.log(divGenerate(el[1]));
+            commentsDiv.innerHTML += divGenerate(el[1]);
+          }
+        });
+      show("contact");
       break;
     case "About us":
       el.classList.add("active");
@@ -57,6 +80,14 @@ function highlightLink(el) {
     default:
       break;
   }
+}
+function onPostComment() {
+  const name = document.getElementById("comments-name").value;
+  const text = document.getElementById("comments-text").value;
+  if (name != "" && text != "") {
+    commentServices.add({ name, text });
+    alert("Успешно публикуван коментар!");
+  } else alert("Попълнете всички полета!");
 }
 
 navigation.forEach((element) => {

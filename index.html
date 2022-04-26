@@ -118,10 +118,8 @@
                 />
               </a>
               <div class="carousel-caption">
-                <h3 style="color: aliceblue;">Някво заглавие</h3>
-                <p>
-                  Тук може да се сложи нещо текст ще си измислиш...  
-                </p>
+                <h3 style="color: aliceblue">Някво заглавие</h3>
+                <p>Тук може да се сложи нещо текст ще си измислиш...</p>
               </div>
             </div>
             <div class="item">
@@ -135,7 +133,8 @@
               <div class="carousel-caption">
                 <h3>Nqkvo zaglavie</h3>
                 <p>
-					И за тук може да си измислиш нещо да напишем, ще изглежда добре. И снимка нали ще си избереш
+                  И за тук може да си измислиш нещо да напишем, ще изглежда
+                  добре. И снимка нали ще си избереш
                 </p>
               </div>
             </div>
@@ -472,8 +471,42 @@
       <!-- /.row -->
     </div>
     <!-- /.container -->
+    <div id="contact-template" style="display: none">
+      <div class="login-root">
+        <div class="formbg-outer" style="margin: 30px">
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <span class="padding-bottom--15"
+                >Моля попълнете всички полета</span
+              >
 
-    <footer  >
+              <form id="stripe-login" onsubmit="return false">
+                <div class="field padding-bottom--24">
+                  <label for="name">Name</label>
+                  <input id="comments-name" type="text" name="name" />
+                </div>
+                <div class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="comment">Message</label>
+                  </div>
+                  <input id="comments-text" type="text" name="comment" />
+                </div>
+
+                <div class="field padding-bottom--24" onclick="onPostComment()">
+                  <input type="submit" name="submit" value="Post" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="comments-section">
+        <!--  THE PLACE FOR THE COMMENTS -->
+      </div>
+    </div>
+
+    <footer>
       <div class="footer-blurb">
         <div class="container">
           <div class="row">
@@ -529,13 +562,13 @@
                 <div class="media-body">
                   <h4 class="media-heading">Свържете се с нас:</h4>
                   <p>
-                    Нашия екип ще отговори на вашите въпроси 24/7. Потърсете ни на един от следните контакти:
+                    Нашия екип ще отговори на вашите въпроси 24/7. Потърсете ни
+                    на един от следните контакти:
                   </p>
                   <p>
-					  имейл: donna@abv.bg <br>
-					  тел. ном :+123 123 1234 <br>
-					  Facebook: donna_facebook
-					  Instagram: donna_instagram
+                    имейл: donna@abv.bg <br />
+                    тел. ном :+123 123 1234 <br />
+                    Facebook: donna_facebook Instagram: donna_instagram
                   </p>
                 </div>
               </div>
@@ -561,5 +594,6 @@
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src="js/holder.min.js"></script>
     <script src="./app.js" defer></script>
+    <script src="./db-connection.js" defer></script>
   </body>
 </html>

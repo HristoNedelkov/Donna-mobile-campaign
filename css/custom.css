@@ -1,45 +1,139 @@
 body {
-	padding-top: 50px;
-	color: #959595;
-	}
-	
-h1, h2, h3, h4, h5, h6 {
-	color: black;
-	}
-	
+  padding-top: 50px;
+  color: #959595;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+}
+
 .feature {
-	background: yellowgreen linear-gradient(to bottom, greenyellow, olivedrab);
-	color: black;
-	}
+  background: yellowgreen linear-gradient(to bottom, greenyellow, olivedrab);
+  color: black;
+}
 
 #feature-carousel {
-	min-height: 400px;
-	}
+  min-height: 400px;
+}
 
 #feature-carousel img {
-	margin: 0 auto;
-	}
-		
+  margin: 0 auto;
+}
+
 .article-intro {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .footer-blurb {
-    padding: 30px 0;
-    background-color: yellowgreen;
-    color: black;
+  padding: 30px 0;
+  background-color: yellowgreen;
+  color: black;
 }
-    
+
 .footer-blurb-item {
-    padding: 30px;
-    }
- 
+  padding: 30px;
+}
+
 .small-print {
-	background-color: #fff;
-	padding: 30px 0;
+  background-color: #fff;
+  padding: 30px 0;
 }
 
 .feature,
 .small-print {
-	text-align: center;
-	}
+  text-align: center;
+}
+.formbg {
+  margin: 0px auto;
+  width: 100%;
+  max-width: 448px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+.padding-horizontal--48 {
+  padding: 48px;
+}
+.padding-bottom--15 {
+  padding-bottom: 15px;
+}
+#stripe-login > div:nth-child(2) > input[type="text"] {
+  line-height: 98px;
+}
+
+.field input {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 8px 16px;
+  width: 100%;
+  min-height: 44px;
+  border: unset;
+  border-radius: 4px;
+  outline-color: rgb(84 105 212 / 0.5);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+.padding-bottom--24 {
+  padding-bottom: 24px;
+}
+.grid--50-50 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+.login-root .flex-justifyContent--center {
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.login-root .flex-flex {
+  display: flex;
+}
+.login-root .align-center {
+  align-items: center;
+}
+.login-root .center-center {
+  align-items: center;
+  justify-content: center;
+}
+.box-root {
+  box-sizing: border-box;
+}
+.login-root .flex-direction--column {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.login-root .loginbackground-gridContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [start] 1fr [left-gutter] (86.6px) [16] [left-gutter] 1fr
+    [end];
+  grid-template-columns: [start] 1fr [left-gutter] repeat(16, 86.6px) [left-gutter] 1fr [end];
+  -ms-grid-rows: [top] 1fr [top-gutter] (64px) [8] [bottom-gutter] 1fr [bottom];
+  grid-template-rows: [top] 1fr [top-gutter] repeat(8, 64px) [bottom-gutter] 1fr [bottom];
+  justify-content: center;
+  margin: 0 -2%;
+  transform: rotate(-12deg) skew(-12deg);
+}
+.login-root .flex-direction--column {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.login-root .flex-flex {
+  display: flex;
+}
+.comment-card {
+  width: 60%;
+  margin: 30px auto;
+  border: 2px solid #000;
+  border-radius: 25px;
+  padding: 10px;
+}
