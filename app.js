@@ -1,9 +1,9 @@
 const paths = {
-  home: domGet("home-template"),
-  catalog: domGet("catalog-template"),
-  //   gallery: domGet("gallery-template"),
-  info: domGet("info-template"),
-  about: domGet("footer-template"),
+  home: document.getElementById("home-template"),
+  catalog: document.getElementById("catalog-template"),
+ // gallery: document.getElementById("gallery-template"),
+  info: document.getElementById("info-template"),
+  about: document.getElementById("footer-template"),
 };
 const navigation = Array.from(
   document.getElementById("navigation-links").children
@@ -20,6 +20,7 @@ function show(...componentsToBeShown) {
     if (componentsToBeShown.includes(key)) {
       paths[key].style.display = "block";
     } else {
+      console.log(paths[key]);
       paths[key].style.display = "none";
     }
   }
@@ -31,29 +32,26 @@ function highlightLink(el) {
   switch (el.textContent.trim()) {
     case "Home":
       el.classList.add("active");
-      show("home", "about");
-      trimUrl("home");
+      show("home");
       break;
     case "Catalog":
       el.classList.add("active");
       show("catalog");
-      trimUrl("catalog");
       break;
     case "Gallery":
       el.classList.add("active");
       //   show("gallery");
-      //   trimUrl("gallery");
 
       break;
     case "Info":
       el.classList.add("active");
       show("info");
-      trimUrl("info");
+
       break;
     case "About us":
       el.classList.add("active");
-      show("about");
-      trimUrl("about-us");
+      //   show("about");
+
       break;
     default:
       break;
