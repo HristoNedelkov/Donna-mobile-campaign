@@ -1,9 +1,8 @@
 const paths = {
   home: document.getElementById("home-template"),
   catalog: document.getElementById("catalog-template"),
- // gallery: document.getElementById("gallery-template"),
+  // gallery: document.getElementById("gallery-template"),
   info: document.getElementById("info-template"),
-  about: document.getElementById("footer-template"),
 };
 const navigation = Array.from(
   document.getElementById("navigation-links").children
@@ -32,7 +31,7 @@ function highlightLink(el) {
   switch (el.textContent.trim()) {
     case "Home":
       el.classList.add("active");
-      show("home");
+      show("home", "about");
       break;
     case "Catalog":
       el.classList.add("active");
@@ -46,11 +45,13 @@ function highlightLink(el) {
     case "Info":
       el.classList.add("active");
       show("info");
-
+      break;
+    case "Contact":
+      el.classList.add("active");
+      show("contact");
       break;
     case "About us":
       el.classList.add("active");
-      //   show("about");
 
       break;
     default:
