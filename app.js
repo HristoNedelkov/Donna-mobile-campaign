@@ -20,7 +20,6 @@ function show(...componentsToBeShown) {
     if (componentsToBeShown.includes(key)) {
       paths[key].style.display = "block";
     } else {
-      console.log(paths[key]);
       paths[key].style.display = "none";
     }
   }
