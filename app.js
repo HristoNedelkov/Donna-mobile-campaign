@@ -4,7 +4,7 @@ const paths = {
   home: document.getElementById("home-template"),
   catalog: document.getElementById("catalog-template"),
   contact: document.getElementById("contact-template"),
-  // gallery: document.getElementById("gallery-template"),
+  gallery: document.getElementById("gallery-template"),
   info: document.getElementById("info-template"),
   about: document.getElementById("about-us-page"),
 };
@@ -40,7 +40,7 @@ function highlightLink(el) {
       break;
     case "Gallery":
       el.classList.add("active");
-      //   show("gallery");
+      show("gallery");
       break;
     case "Info":
       el.classList.add("active");

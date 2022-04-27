@@ -308,3 +308,8 @@ ul > li:hover {
   color: #000;
   font-weight: bold;
 }
+.img-gallery {
+  width: 60%;
+  margin: 30px;
+  margin-left: 20%;
+}
