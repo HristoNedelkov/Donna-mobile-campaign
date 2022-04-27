@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
 body {
   padding-top: 50px;
   color: #959595;
@@ -141,4 +142,169 @@ input[type="submit"]:hover,
 ul > li:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+#about-us-page {
+  display: grid;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  align-content: center;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 70vh;
+  width: 75vw;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 12px;
+}
+#about-us-page .image {
+  background-color: #12192c;
+  display: flex;
+  border-radius: 12px 0 0 12px;
+}
+#about-us-page .image img {
+  height: 50vh;
+  margin: 50px auto;
+  border: 2px solid #fff;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+
+#about-us-page .content {
+  background-color: #12192c;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 12px 12px 0;
+  color: #fff;
+}
+#about-us-page .content h2 {
+  font-family: "Playfair Display", serif;
+  color: white;
+  text-transform: uppercase;
+  font-size: 36px;
+  letter-spacing: 6px;
+  opacity: 0.9;
+}
+#about-us-page .content span {
+  height: 0.5px;
+  width: 80px;
+  background: #777;
+  margin: 30px 0;
+}
+#about-us-page .content p {
+  font-family: "Playfair Display", serif;
+  padding-bottom: 15px;
+  font-weight: 300;
+  opacity: 0.7;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 22px;
+  line-height: 1.7;
+  color: #ffffff;
+}
+#about-us-page .links {
+  margin: 15px 0;
+}
+#about-us-page .links li {
+  border: 2px solid #4158d0;
+  list-style: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 160px;
+  text-align: center;
+}
+#about-us-page .links li a {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+#about-us-page .links li:hover {
+  border-color: #c850c0;
+}
+
+#about-us-page .vertical-line {
+  height: 30px;
+  width: 3px;
+  background: #c850c0;
+  margin: 0 auto;
+}
+#about-us-page .icons {
+  display: flex;
+  padding: 15px 0;
+}
+#about-us-page .icons li {
+  display: block;
+  padding: 5px;
+  margin: 5px;
+}
+#about-us-page .icons li i {
+  font-size: 26px;
+  opacity: 0.8;
+}
+#about-us-page .icons li i:hover {
+  color: #c850c0;
+  cursor: pointer;
+}
+
+/*****************/
+
+@media (max-width: 900px) {
+  #about-us-page section {
+    grid-template-columns: 1fr;
+    width: 100%;
+    border-radius: none;
+  }
+  #about-us-page .image {
+    height: 100vh;
+    border-radius: none;
+  }
+  #about-us-page .content {
+    height: 100vh;
+    border-radius: none;
+  }
+  #about-us-page .content h2 {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  #about-us-page .content span {
+    margin: 20px 0;
+  }
+  #about-us-page .content p {
+    font-size: 14px;
+  }
+  #about-us-page .links li a {
+    font-size: 14px;
+  }
+  #about-us-page .links {
+    margin: 5px 0;
+  }
+  #about-us-page .links li {
+    padding: 6px 10px;
+  }
+  #about-us-page .icons li i {
+    font-size: 15px;
+  }
+}
+#about-us-page .credit {
+  text-align: center;
+  color: #000;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#about-us-page .credit a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
 }
